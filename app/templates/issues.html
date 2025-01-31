@@ -1,0 +1,22 @@
+{% extends "layout.html" %} 
+{% block body %} 
+<h1>Project Issues</h1> 
+<table> 
+    <thead> 
+        <tr> 
+            <th>Issue</th> 
+            <th>Root Cause Analysis (RCA)</th> 
+            <th>Improvement Suggestions</th> 
+        </tr> 
+    </thead> 
+    <tbody> 
+        {% for issue in issues %} 
+        <tr> 
+            <td>{{ issue.issue }}</td> 
+            <td>{{ issue.rca }}</td> 
+            <td>{{ issue.improvement }}</td> 
+        </tr> 
+        {% endfor %} 
+    </tbody> 
+</table> 
+{% endblock %}

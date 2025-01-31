@@ -1,16 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Index Page</title>
-</head>
-<body>
-    <p>You have reached the Vulnerable App.</p>
-    <p>Here are the list of urls you would need while using this application</p>
-    <ul>
-        {% for url in urls %}
-            <li><a href = "{{ url[0] }}">{{ url[0] }}</a> - {{ url[1] }} - Allowed Methods: {{ url[2] }}</li>
-        {% endfor %}
-    </ul>
-</body>
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <title>Index Page</title> 
+</head> 
+<body> 
+    <p>You have reached the Vulnerable App.</p> 
+    <p>Here are the list of urls you would need while using this application</p> 
+    <ul> 
+        {% for url in urls %} 
+            <li><a href = "{{ url[0] }}">{{ url[0] }}</a> - {{ url[1] }} - Allowed Methods: {{ url[2] }}</li> 
+        {% endfor %} 
+        <li><a href="{{ url_for('view_issues') }}">View Issues</a></li> 
+        <li><a href="{{ url_for('user_feedback') }}">Give Feedback</a></li> 
+    </ul> 
+</body> 
 </html>

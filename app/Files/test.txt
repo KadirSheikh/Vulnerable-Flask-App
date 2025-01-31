@@ -1,0 +1,15 @@
+Insecure Password Storage 
+Passwords are stored using MD5 hashing, which is not secure. 
+Use a stronger hashing algorithm like bcrypt or Argon2. 
+Lack of Input Validation 
+User inputs are not properly validated, leading to potential injection attacks. 
+Implement server-side validation for all user inputs. 
+Unrestricted File Upload 
+The application allows any file type to be uploaded. 
+Restrict file uploads to specific types and scan for malicious content. 
+Insecure JWT Implementation 
+JWT tokens are not properly verified before use. 
+Ensure JWTs are verified using a secure key and include expiration times. 
+Missing Rate Limiting 
+The application does not implement rate limiting on API endpoints. 
+Add rate limiting to prevent abuse and brute-force attacks. 
