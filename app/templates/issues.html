@@ -1,22 +1,16 @@
 {% extends "layout.html" %} 
 {% block body %} 
-<h1>Project Issues</h1> 
-<table> 
-    <thead> 
-        <tr> 
-            <th>Issue</th> 
-            <th>Root Cause Analysis (RCA)</th> 
-            <th>Improvement Suggestions</th> 
-        </tr> 
-    </thead> 
-    <tbody> 
+<div class="block1"> 
+    <h1>Issues List</h1> 
+    <h2>Here are the identified issues along with their RCA and improvement suggestions:</h2> 
+    <ul> 
         {% for issue in issues %} 
-        <tr> 
-            <td>{{ issue.issue }}</td> 
-            <td>{{ issue.rca }}</td> 
-            <td>{{ issue.improvement }}</td> 
-        </tr> 
+            <li> 
+                <strong>Issue:</strong> {{ issue.issue }}<br> 
+                <strong>Root Cause Analysis (RCA):</strong> {{ issue.rca }}<br> 
+                <strong>Improvement Suggestion:</strong> {{ issue.improvement }}<br> 
+            </li> 
         {% endfor %} 
-    </tbody> 
-</table> 
+    </ul> 
+</div> 
 {% endblock %}
