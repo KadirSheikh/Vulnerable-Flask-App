@@ -1,0 +1,16 @@
+{% extends "layout.html" %} 
+{% block body %} 
+<div class="block1"> 
+    <h1>Issues List</h1> 
+    <h2>Here are the identified issues along with their RCA and improvement suggestions:</h2> 
+    <ul> 
+        {% for issue in issues %} 
+            <li> 
+                <strong>Issue:</strong> {{ issue.issue }}<br> 
+                <strong>Root Cause Analysis (RCA):</strong> {{ issue.rca }}<br> 
+                <strong>Improvement Suggestion:</strong> {{ issue.improvement }}<br> 
+            </li> 
+        {% endfor %} 
+    </ul> 
+</div> 
+{% endblock %}

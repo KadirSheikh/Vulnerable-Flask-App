@@ -1,0 +1,17 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <title>User Feedback</title> 
+</head> 
+<body> 
+    <h1>User Feedback Form</h1> 
+    <form action="{{ url_for('submit_feedback') }}" method="post"> 
+        <label for="username">Username:</label> 
+        <input type="text" id="username" name="username" required><br><br> 
+        <label for="feedback">Feedback:</label><br> 
+        <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br><br> 
+        <input type="submit" value="Submit Feedback"> 
+    </form> 
+</body> 
+</html> 
